@@ -37,7 +37,7 @@ class Drawer:
         dx, dy = radius, 0
 
         glBegin(GL_TRIANGLE_FAN)
-        gl.glColor4f(self.color[0] / 255, self.color[1] / 255, self.color[2] / 255, 1.0)
+        glColor4f(self.color[0] / 255, self.color[1] / 255, self.color[2] / 255, 1.0)
         glVertex2f(x, y)
         for i in range(iterations + 1):
             glVertex2f(x + dx, y + dy)

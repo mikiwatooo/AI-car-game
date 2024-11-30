@@ -12,7 +12,6 @@ vec2 = pygame.math.Vector2
 class Game:
     no_of_actions = 9
     state_size = 15
-
     def __init__(self):
         trackImg = pyglet.image.load('./Data/'+tracks[trackNo]+'.png')
         self.trackSprite = pyglet.sprite.Sprite(trackImg, x=0, y=0)
