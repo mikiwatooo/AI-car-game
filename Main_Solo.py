@@ -50,21 +50,7 @@ class MyWindow(pyglet.window.Window):
 
         if symbol == key.SPACE:
             self.ai.training = not self.ai.training
-#funckja do rysowania kresek -> do wyjebania
-    def on_mouse_press(self, x, y, button, modifiers):
-        if self.firstClick:
-            self.clickPos = [x, y]
-        else:
-            print("{}, {}, {}, {}".format(self.clickPos[0],displayHeight - self.clickPos[1],x, displayHeight - y))
-            self.game.gates.append(RewardGate(self.clickPos[0], displayHeight - self.clickPos[1], x, displayHeight - y))
-
-            #print("{}, {}, {}, {}".format(self.clickPos[0],displayHeight - self.clickPos[1],x, displayHeight - y))
-            #self.game.walls.append(Wall(self.clickPos[0], self.clickPos[1], x, y))
-
-        self.firstClick = not self.firstClick
-        pass
-
-
+            
     def on_draw(self):
 
         window.set_size(width=displayWidth,height=displayHeight)
